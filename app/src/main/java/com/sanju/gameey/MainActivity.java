@@ -50,13 +50,15 @@ public class MainActivity extends AppCompatActivity {
 
                     // if someone own
                     TextView winningText = (TextView)findViewById(R.id.winningText);
-                    winningText.setText(winner + "has won!");
+                    winningText.setText(winner+" "+ "has won!");
                     LinearLayout linear = (LinearLayout)findViewById(R.id.linear);
                     linear.setVisibility(View.VISIBLE);
                 } else {
                     boolean gameIsOver = true;
                     for (int counterState : gameState){
-                        if(counterState ==2) gameIsOver = false;
+                        if(counterState ==2) {
+                            gameIsOver = false;
+                        }
                     }
                     if(gameIsOver){
                         // if someone own
@@ -70,6 +72,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
     public void playAgain(View view){
+        gameIsActive = true;
         LinearLayout linear = (LinearLayout)findViewById(R.id.linear);
         linear.setVisibility(View.INVISIBLE);
 
@@ -88,7 +91,5 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-
     }
 }
