@@ -9,7 +9,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+public class TictacActivity extends AppCompatActivity {
 
     // 0 = black, 1 = red
     int activePlayer = 0;
