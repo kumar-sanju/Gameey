@@ -19,130 +19,150 @@
         android:backgroundTint="#44C636"
         android:layout_centerVertical="true"
         android:onClick="start"
-        android:visibility="invisible"
         />
 
     <RelativeLayout
-        android:id="@+id/relative"
+        android:id="@+id/relative1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
         >
 
+        <RelativeLayout
+            android:id="@+id/relative"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                android:id="@+id/timerTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="30s"
+                android:textSize="40dp"
+                android:background="#CD3535"
+                android:padding="5dp"
+                android:textColor="@android:color/white"
+                />
+            <TextView
+                android:id="@+id/sumTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="31 + 12"
+                android:textSize="30dp"
+                android:background="#8635CD"
+                android:padding="5dp"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:textColor="@android:color/white"
+                />
+            <TextView
+                android:id="@+id/pointTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0/0"
+                android:textSize="40dp"
+                android:background="#355BCD"
+                android:padding="5dp"
+                android:layout_alignParentRight="true"
+                android:textColor="@android:color/white"
+                />
+
+        </RelativeLayout>
+
+        <GridLayout
+            android:id="@+id/gridLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/relative"
+            android:layout_margin="5dp"
+            >
+            <Button
+                android:id="@+id/button0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3"
+                android:layout_column="0"
+                android:layout_row="0"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_gravity="fill"
+                android:tag="0"
+                android:textSize="80sp"
+                android:background="#00BCD4"
+                android:onClick="chooseAnswer"
+                />
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3"
+                android:layout_column="1"
+                android:layout_row="0"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_gravity="fill"
+                android:tag="1"
+                android:textSize="80sp"
+                android:background="#D47500"
+                android:onClick="chooseAnswer"
+                />
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3"
+                android:layout_column="0"
+                android:layout_row="1"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_gravity="fill"
+                android:tag="2"
+                android:textSize="80sp"
+                android:background="#00D415"
+                android:onClick="chooseAnswer"
+                />
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3"
+                android:layout_column="1"
+                android:layout_row="1"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_gravity="fill"
+                android:tag="3"
+                android:textSize="80sp"
+                android:background="#BF00D4"
+                android:onClick="chooseAnswer"
+                />
+        </GridLayout>
+
         <TextView
-            android:id="@+id/timerTextView"
+            android:id="@+id/resultTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="30s"
-            android:textSize="40dp"
-            android:background="#CD3535"
-            android:padding="5dp"
-            android:textColor="@android:color/white"
-            />
-        <TextView
-            android:id="@+id/sumTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="31 + 12"
-            android:textSize="30dp"
-            android:background="#8635CD"
-            android:padding="5dp"
-            android:layout_centerVertical="true"
+            android:text=""
+            android:textStyle="bold"
+            android:textSize="35sp"
             android:layout_centerHorizontal="true"
-            android:textColor="@android:color/white"
+            android:layout_below="@+id/gridLayout"
+            android:layout_marginTop="50dp"
             />
-        <TextView
-            android:id="@+id/pointTextView"
+
+        <Button
+            android:id="@+id/playAgainBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="0/0"
-            android:textSize="40dp"
-            android:background="#355BCD"
-            android:padding="5dp"
-            android:layout_alignParentRight="true"
-            android:textColor="@android:color/white"
+            android:text="PLAY AGAIN"
+            android:onClick="playAgain"
+            android:visibility="invisible"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="30dp"
             />
 
     </RelativeLayout>
-
-    <GridLayout
-        android:id="@+id/gridLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/relative"
-        android:layout_margin="5dp"
-        >
-        <Button
-            android:id="@+id/button0"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="3"
-            android:layout_column="0"
-            android:layout_row="0"
-            android:layout_columnWeight="1"
-            android:layout_rowWeight="1"
-            android:layout_gravity="fill"
-            android:tag="0"
-            android:textSize="80sp"
-            android:background="#00BCD4"
-            android:onClick="chooseAnswer"
-            />
-        <Button
-            android:id="@+id/button1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="3"
-            android:layout_column="1"
-            android:layout_row="0"
-            android:layout_columnWeight="1"
-            android:layout_rowWeight="1"
-            android:layout_gravity="fill"
-            android:tag="1"
-            android:textSize="80sp"
-            android:background="#D47500"
-            android:onClick="chooseAnswer"
-            />
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="3"
-            android:layout_column="0"
-            android:layout_row="1"
-            android:layout_columnWeight="1"
-            android:layout_rowWeight="1"
-            android:layout_gravity="fill"
-            android:tag="2"
-            android:textSize="80sp"
-            android:background="#00D415"
-            android:onClick="chooseAnswer"
-            />
-        <Button
-            android:id="@+id/button3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="3"
-            android:layout_column="1"
-            android:layout_row="1"
-            android:layout_columnWeight="1"
-            android:layout_rowWeight="1"
-            android:layout_gravity="fill"
-            android:tag="4"
-            android:textSize="80sp"
-            android:background="#BF00D4"
-            android:onClick="chooseAnswer"
-            />
-    </GridLayout>
-
-    <TextView
-        android:id="@+id/resultTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=""
-        android:textStyle="bold"
-        android:textSize="40sp"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/gridLayout"
-        android:layout_marginTop="50dp"
-        />
 
 </RelativeLayout>
