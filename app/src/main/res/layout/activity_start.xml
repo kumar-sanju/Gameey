@@ -29,6 +29,13 @@
             android:layout_gravity="center"
             android:onClick="brainQuizplay"
             />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Roulette"
+            android:layout_gravity="center"
+            android:onClick="roulette"
+            />
     </LinearLayout>
 
 </RelativeLayout>

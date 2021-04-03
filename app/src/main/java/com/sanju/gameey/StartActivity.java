@@ -25,4 +25,10 @@ public class StartActivity extends AppCompatActivity {
         startActivity(intent);
         finish();
     }
+
+    public void roulette(View view) {
+        Intent intent = new Intent(StartActivity.this, RouletteActivity.class);
+        startActivity(intent);
+        finish();
+    }
 }

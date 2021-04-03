@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".BrainQuizActivity"></activity>
+        <activity android:name=".RouletteActivity"></activity>
+        <activity android:name=".BrainQuizActivity" />
         <activity android:name=".StartActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -17,7 +18,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".TictacActivity"></activity>
+        <activity android:name=".TictacActivity" />
     </application>
 
 </manifest>
