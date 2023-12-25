@@ -28,10 +28,10 @@ public class TictacActivity extends AppCompatActivity {
             counter.setTranslationY(-1000f);
 
             if(activePlayer == 0){
-                counter.setImageResource(R.drawable.black);
+                counter.setImageResource(R.drawable.ic_circle);
                 activePlayer = 1;
             } else{
-                counter.setImageResource(R.drawable.red);
+                counter.setImageResource(R.drawable.ic_cross);
                 activePlayer = 0;
             }
             counter.animate().translationYBy(1000f).rotation(360).setDuration(300);
@@ -90,6 +90,6 @@ public class TictacActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_tictac);
     }
 }

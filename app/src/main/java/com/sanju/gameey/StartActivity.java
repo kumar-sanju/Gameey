@@ -17,18 +17,18 @@ public class StartActivity extends AppCompatActivity {
     public void tictacPlay(View view) {
         Intent intent = new Intent(StartActivity.this, TictacActivity.class);
         startActivity(intent);
-        finish();
+//        finish();
     }
 
     public void brainQuizplay(View view) {
         Intent intent = new Intent(StartActivity.this, BrainQuizActivity.class);
         startActivity(intent);
-        finish();
+//        finish();
     }
 
     public void roulette(View view) {
         Intent intent = new Intent(StartActivity.this, RouletteActivity.class);
         startActivity(intent);
-        finish();
+//        finish();
     }
 }
