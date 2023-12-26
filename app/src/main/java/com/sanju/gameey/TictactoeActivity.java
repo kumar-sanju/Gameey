@@ -1,6 +1,7 @@
 package com.sanju.gameey;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -9,6 +10,8 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 public class TictactoeActivity extends AppCompatActivity {
@@ -29,7 +32,9 @@ public class TictactoeActivity extends AppCompatActivity {
 
     //    variable to reset button
     private Button Reset;
-
+    RelativeLayout mainLayout;
+    LinearLayout templateLayout;
+    CardView template1, template2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,6 +57,31 @@ public class TictactoeActivity extends AppCompatActivity {
         scoreo = findViewById(R.id.ScoreY);
 
         Reset = findViewById(R.id.Reset);
+
+        mainLayout = findViewById(R.id.mainLayout);
+        templateLayout = findViewById(R.id.templateLayout);
+        mainLayout.setVisibility(View.GONE);
+
+        template1 = findViewById(R.id.template1);
+        template2 = findViewById(R.id.template2);
+
+        template1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Utlis.TEMPLATE = 1;
+                templateLayout.setVisibility(View.GONE);
+                mainLayout.setVisibility(View.VISIBLE);
+            }
+        });
+
+        template2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Utlis.TEMPLATE = 2;
+                templateLayout.setVisibility(View.GONE);
+                mainLayout.setVisibility(View.VISIBLE);
+            }
+        });
 
         //reset button
         Reset.setOnClickListener(new View.OnClickListener() {
@@ -83,11 +113,23 @@ public class TictactoeActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 if(startGame.equals("X")){
-                    button1.setImageResource(R.drawable.green);
+                    if (Utlis.TEMPLATE == 1){
+                        button1.setImageResource(R.drawable.green);
+                    }
+                    else {
+                        button1.setImageResource(R.drawable.ic_cross);
+                    }
+
                     b1 = 1;
                     i++;
                 }else{
-                    button1.setImageResource(R.drawable.black2);
+                    if (Utlis.TEMPLATE == 1){
+                        button1.setImageResource(R.drawable.black2);
+                    }
+                    else {
+                        button1.setImageResource(R.drawable.ic_circle);
+                    }
+
                     b1 = 0;
                     i++;
                 }
@@ -106,11 +148,21 @@ public class TictactoeActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 if(startGame.equals("X")){
-                    button2.setImageResource(R.drawable.green);
+                    if (Utlis.TEMPLATE == 1){
+                        button2.setImageResource(R.drawable.green);
+                    }
+                    else {
+                        button2.setImageResource(R.drawable.ic_cross);
+                    }
                     b2 = 1;
                     i++;
                 }else{
-                    button2.setImageResource(R.drawable.black2);
+                    if (Utlis.TEMPLATE == 1){
+                        button2.setImageResource(R.drawable.black2);
+                    }
+                    else {
+                        button2.setImageResource(R.drawable.ic_circle);
+                    }
                     b2 = 0;
                     i++;
                 }
@@ -128,11 +180,21 @@ public class TictactoeActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 if(startGame.equals("X")){
-                    button3.setImageResource(R.drawable.green);
+                    if (Utlis.TEMPLATE == 1){
+                        button3.setImageResource(R.drawable.green);
+                    }
+                    else {
+                        button3.setImageResource(R.drawable.ic_cross);
+                    }
                     b3 = 1;
                     i++;
                 }else{
-                    button3.setImageResource(R.drawable.black2);
+                    if (Utlis.TEMPLATE == 1){
+                        button3.setImageResource(R.drawable.black2);
+                    }
+                    else {
+                        button3.setImageResource(R.drawable.ic_circle);
+                    }
                     b3 = 0;
                     i++;
                 }
@@ -150,11 +212,21 @@ public class TictactoeActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 if(startGame.equals("X")){
-                    button4.setImageResource(R.drawable.green);
+                    if (Utlis.TEMPLATE == 1){
+                        button4.setImageResource(R.drawable.green);
+                    }
+                    else {
+                        button4.setImageResource(R.drawable.ic_cross);
+                    }
                     b4 = 1;
                     i++;
                 }else{
-                    button4.setImageResource(R.drawable.black2);
+                    if (Utlis.TEMPLATE == 1){
+                        button4.setImageResource(R.drawable.black2);
+                    }
+                    else {
+                        button4.setImageResource(R.drawable.ic_circle);
+                    }
                     b4 = 0;
                     i++;
                 }
@@ -172,11 +244,21 @@ public class TictactoeActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 if(startGame.equals("X")){
-                    button5.setImageResource(R.drawable.green);
+                    if (Utlis.TEMPLATE == 1){
+                        button5.setImageResource(R.drawable.green);
+                    }
+                    else {
+                        button5.setImageResource(R.drawable.ic_cross);
+                    }
                     b5 = 1;
                     i++;
                 }else{
-                    button5.setImageResource(R.drawable.black2);
+                    if (Utlis.TEMPLATE == 1){
+                        button5.setImageResource(R.drawable.black2);
+                    }
+                    else {
+                        button5.setImageResource(R.drawable.ic_circle);
+                    }
                     b5 = 0;
                     i++;
                 }
@@ -194,11 +276,21 @@ public class TictactoeActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 if(startGame.equals("X")){
-                    button6.setImageResource(R.drawable.green);
+                    if (Utlis.TEMPLATE == 1){
+                        button6.setImageResource(R.drawable.green);
+                    }
+                    else {
+                        button6.setImageResource(R.drawable.ic_cross);
+                    }
                     b6 = 1;
                     i++;
                 }else{
-                    button6.setImageResource(R.drawable.black2);
+                    if (Utlis.TEMPLATE == 1){
+                        button6.setImageResource(R.drawable.black2);
+                    }
+                    else {
+                        button6.setImageResource(R.drawable.ic_circle);
+                    }
                     b6 = 0;
                     i++;
                 }
@@ -216,11 +308,21 @@ public class TictactoeActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 if(startGame.equals("X")){
-                    button7.setImageResource(R.drawable.green);
+                    if (Utlis.TEMPLATE == 1){
+                        button7.setImageResource(R.drawable.green);
+                    }
+                    else {
+                        button7.setImageResource(R.drawable.ic_cross);
+                    }
                     b7 = 1;
                     i++;
                 }else{
-                    button7.setImageResource(R.drawable.black2);
+                    if (Utlis.TEMPLATE == 1){
+                        button7.setImageResource(R.drawable.black2);
+                    }
+                    else {
+                        button7.setImageResource(R.drawable.ic_circle);
+                    }
                     b7 = 0;
                     i++;
                 }
@@ -238,11 +340,21 @@ public class TictactoeActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 if(startGame.equals("X")){
-                    button8.setImageResource(R.drawable.green);
+                    if (Utlis.TEMPLATE == 1){
+                        button8.setImageResource(R.drawable.green);
+                    }
+                    else {
+                        button8.setImageResource(R.drawable.ic_cross);
+                    }
                     b8 = 1;
                     i++;
                 }else{
-                    button8.setImageResource(R.drawable.black2);
+                    if (Utlis.TEMPLATE == 1){
+                        button8.setImageResource(R.drawable.black2);
+                    }
+                    else {
+                        button8.setImageResource(R.drawable.ic_circle);
+                    }
                     b8 = 0;
                     i++;
                 }
@@ -261,12 +373,22 @@ public class TictactoeActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 if(startGame.equals("X")){
-                    button9.setImageResource(R.drawable.green);
+                    if (Utlis.TEMPLATE == 1){
+                        button9.setImageResource(R.drawable.green);
+                    }
+                    else {
+                        button9.setImageResource(R.drawable.ic_cross);
+                    }
                     b9 = 1;
                     i++;
                 }
                 else{
-                    button9.setImageResource(R.drawable.black2);
+                    if (Utlis.TEMPLATE == 1){
+                        button9.setImageResource(R.drawable.black2);
+                    }
+                    else {
+                        button9.setImageResource(R.drawable.ic_circle);
+                    }
                     b9 = 0;
                     i++;
                 }
