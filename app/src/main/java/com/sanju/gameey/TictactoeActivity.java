@@ -38,21 +38,20 @@ public class TictactoeActivity extends AppCompatActivity {
 
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-        button1 = findViewById(R.id.buttonImage1);
-        button2 = findViewById(R.id.buttonImage2);
-        button3 = findViewById(R.id.buttonImage3);
-        button4 = findViewById(R.id.buttonImage4);
-        button5 = findViewById(R.id.buttonImage5);
-        button6 = findViewById(R.id.buttonImage6);
-        button7 = findViewById(R.id.buttonImage7);
-        button8 = findViewById(R.id.buttonImage8);
-        button9 = findViewById(R.id.buttonImage9);
+        button1 = findViewById(R.id.imageView);
+        button2 = findViewById(R.id.imageView1);
+        button3 = findViewById(R.id.imageView2);
+        button4 = findViewById(R.id.imageView3);
+        button5 = findViewById(R.id.imageView4);
+        button6 = findViewById(R.id.imageView5);
+        button7 = findViewById(R.id.imageView6);
+        button8 = findViewById(R.id.imageView7);
+        button9 = findViewById(R.id.imageView8);
 
         scorex = findViewById(R.id.ScoreX);
         scoreo = findViewById(R.id.ScoreY);
 
         Reset = findViewById(R.id.Reset);
-
 
         //reset button
         Reset.setOnClickListener(new View.OnClickListener() {
@@ -96,8 +95,7 @@ public class TictactoeActivity extends AppCompatActivity {
                 choosePlayer();
 
                 winningGame();
-
-
+                button1.setClickable(false);
             }
         });
 
@@ -120,8 +118,7 @@ public class TictactoeActivity extends AppCompatActivity {
                 choosePlayer();
 
                 winningGame();
-
-
+                button2.setClickable(false);
             }
         });
 
@@ -143,8 +140,7 @@ public class TictactoeActivity extends AppCompatActivity {
                 choosePlayer();
 
                 winningGame();
-
-
+                button3.setClickable(false);
             }
         });
 
@@ -166,8 +162,7 @@ public class TictactoeActivity extends AppCompatActivity {
                 choosePlayer();
 
                 winningGame();
-
-
+                button4.setClickable(false);
             }
         });
 
@@ -189,8 +184,7 @@ public class TictactoeActivity extends AppCompatActivity {
                 choosePlayer();
 
                 winningGame();
-
-
+                button5.setClickable(false);
             }
         });
 
@@ -212,8 +206,7 @@ public class TictactoeActivity extends AppCompatActivity {
                 choosePlayer();
 
                 winningGame();
-
-
+                button6.setClickable(false);
             }
         });
 
@@ -235,8 +228,7 @@ public class TictactoeActivity extends AppCompatActivity {
                 choosePlayer();
 
                 winningGame();
-
-
+                button7.setClickable(false);
             }
         });
 
@@ -258,8 +250,7 @@ public class TictactoeActivity extends AppCompatActivity {
                 choosePlayer();
 
                 winningGame();
-
-
+                button8.setClickable(false);
             }
         });
 
@@ -283,8 +274,7 @@ public class TictactoeActivity extends AppCompatActivity {
                 choosePlayer();
 
                 winningGame();
-
-
+                button9.setClickable(false);
             }
         });
     }
@@ -804,7 +794,6 @@ public class TictactoeActivity extends AppCompatActivity {
 
     //resetValue function
     private void resetValues() {
-
         b1 = 5;
         b2 = 5;
         b3 = 5;
@@ -815,6 +804,16 @@ public class TictactoeActivity extends AppCompatActivity {
         b8 = 5;
         b9 = 5;
         i = 0;
+
+        button1.setClickable(true);
+        button2.setClickable(true);
+        button3.setClickable(true);
+        button4.setClickable(true);
+        button5.setClickable(true);
+        button6.setClickable(true);
+        button7.setClickable(true);
+        button8.setClickable(true);
+        button9.setClickable(true);
 
     }
 

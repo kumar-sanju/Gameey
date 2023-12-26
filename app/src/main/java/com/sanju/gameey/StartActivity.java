@@ -15,7 +15,7 @@ public class StartActivity extends AppCompatActivity {
     }
 
     public void tictacPlay(View view) {
-        Intent intent = new Intent(StartActivity.this, TictacActivity.class);
+        Intent intent = new Intent(StartActivity.this, TictactoeActivity.class);
         startActivity(intent);
 //        finish();
     }
