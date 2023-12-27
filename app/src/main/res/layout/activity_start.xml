@@ -23,7 +23,6 @@
             android:layout_marginTop="10dp"
             app:cardBackgroundColor="#FFEB3B"
             android:layout_gravity="center"
-            android:onClick="tictacPlay"
             >
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -44,6 +43,7 @@
                     android:background="@color/white"
                     android:textColor="@color/black"
                     android:layout_margin="10dp"
+                    android:onClick="tictacPlay"
                     />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
@@ -71,6 +71,7 @@
                     android:background="@color/white"
                     android:textColor="@color/black"
                     android:layout_margin="10dp"
+                    android:onClick="brainQuizplay"
                     />
 
                 <ImageView
@@ -107,6 +108,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Roulette"
+                    android:onClick="roulette"
                     android:layout_gravity="center"
                     android:background="@color/white"
                     android:textColor="@color/black"

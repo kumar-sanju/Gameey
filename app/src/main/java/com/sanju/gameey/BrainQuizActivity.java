@@ -59,7 +59,7 @@ public class BrainQuizActivity extends AppCompatActivity {
         int a = random.nextInt(21);
         int b = random.nextInt(21);
 
-        sumTextView.setText(Integer.toString(a) + "+" +Integer.toString(b));
+        sumTextView.setText("Question : "+ Integer.toString(a) + "+" +Integer.toString(b));
 
         localCorrectAnswer = random.nextInt(4);
         answers.clear();
@@ -99,7 +99,7 @@ public class BrainQuizActivity extends AppCompatActivity {
         }
 
         numberOfIncreament++;
-        pointTextView.setText(Integer.toString(score) + "/" + Integer.toString(numberOfIncreament));
+        pointTextView.setText("Score : " + Integer.toString(score) + "/" + Integer.toString(numberOfIncreament));
         generateAQuestion();
 //        Log.i("Tag", (String) view.getTag());
     }
@@ -112,7 +112,7 @@ public class BrainQuizActivity extends AppCompatActivity {
         score = 0;
         numberOfIncreament = 0;
 
-        timerTextView.setText("30s");
+        timerTextView.setText("Timer : " + "30s");
         pointTextView.setText("0/0");
         resultTextView.setText("");
         playAgainBtn.setVisibility(View.INVISIBLE);
@@ -123,13 +123,13 @@ public class BrainQuizActivity extends AppCompatActivity {
 
             @Override
             public void onTick(long millisUntilFinished) {
-                timerTextView.setText(String.valueOf(millisUntilFinished / 1000) + "s");
+                timerTextView.setText("Timer : " + String.valueOf(millisUntilFinished / 1000) + "s");
             }
 
             @Override
             public void onFinish() {
                 playAgainBtn.setVisibility(View.VISIBLE);
-                timerTextView.setText("0s");
+                timerTextView.setText("Timer Ended");
                 resultTextView.setText("Your Score: " + Integer.toString(score) + "/" + Integer.toString(numberOfIncreament));
                 button0.setClickable(false);
                 button1.setClickable(false);

@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="10dp"
+    android:background="@drawable/bg_app"
     tools:context=".BrainQuizActivity">
 
     <Button
@@ -28,10 +29,12 @@
         android:visibility="invisible"
         >
 
-        <RelativeLayout
+        <LinearLayout
             android:id="@+id/relative"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
             >
 
             <TextView
@@ -45,37 +48,37 @@
                 android:textColor="@android:color/white"
                 />
             <TextView
-                android:id="@+id/sumTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="31 + 12"
-                android:textSize="30dp"
-                android:background="#8635CD"
-                android:padding="5dp"
-                android:layout_centerVertical="true"
-                android:layout_centerHorizontal="true"
-                android:textColor="@android:color/white"
-                />
-            <TextView
                 android:id="@+id/pointTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="0/0"
-                android:textSize="40dp"
+                android:textSize="30dp"
                 android:background="#355BCD"
                 android:padding="5dp"
-                android:layout_alignParentRight="true"
                 android:textColor="@android:color/white"
+                android:layout_marginTop="10dp"
                 />
 
-        </RelativeLayout>
+            <TextView
+                android:id="@+id/sumTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="31 + 12"
+                android:textSize="40dp"
+                android:background="#8635CD"
+                android:padding="5dp"
+                android:textColor="@android:color/white"
+                android:layout_marginTop="10dp"
+                />
+
+        </LinearLayout>
 
         <GridLayout
             android:id="@+id/gridLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/relative"
-            android:layout_margin="5dp"
+            android:layout_margin="10dp"
             >
             <Button
                 android:id="@+id/button0"
@@ -148,7 +151,7 @@
             android:textSize="35sp"
             android:layout_centerHorizontal="true"
             android:layout_below="@+id/gridLayout"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="20dp"
             />
 
         <Button
