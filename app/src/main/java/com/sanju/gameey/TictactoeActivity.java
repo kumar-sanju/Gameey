@@ -34,7 +34,7 @@ public class TictactoeActivity extends AppCompatActivity {
     private Button Reset;
     RelativeLayout mainLayout;
     LinearLayout templateLayout;
-    CardView template1, template2;
+    CardView template1, template2, template3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,6 +64,7 @@ public class TictactoeActivity extends AppCompatActivity {
 
         template1 = findViewById(R.id.template1);
         template2 = findViewById(R.id.template2);
+        template3 = findViewById(R.id.template3);
 
         template1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -78,6 +79,15 @@ public class TictactoeActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Utlis.TEMPLATE = 2;
+                templateLayout.setVisibility(View.GONE);
+                mainLayout.setVisibility(View.VISIBLE);
+            }
+        });
+
+        template3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Utlis.TEMPLATE = 3;
                 templateLayout.setVisibility(View.GONE);
                 mainLayout.setVisibility(View.VISIBLE);
             }
@@ -114,7 +124,10 @@ public class TictactoeActivity extends AppCompatActivity {
 
                 if(startGame.equals("X")){
                     if (Utlis.TEMPLATE == 1){
-                        button1.setImageResource(R.drawable.green);
+                        button1.setImageResource(R.drawable.green_casino);
+                    }
+                    else if (Utlis.TEMPLATE == 3){
+                        button1.setImageResource(R.drawable.ic_yollow_pikachu);
                     }
                     else {
                         button1.setImageResource(R.drawable.ic_cross);
@@ -124,7 +137,10 @@ public class TictactoeActivity extends AppCompatActivity {
                     i++;
                 }else{
                     if (Utlis.TEMPLATE == 1){
-                        button1.setImageResource(R.drawable.black2);
+                        button1.setImageResource(R.drawable.black_casino);
+                    }
+                    else if (Utlis.TEMPLATE == 3){
+                        button1.setImageResource(R.drawable.ic_black_pikachu);
                     }
                     else {
                         button1.setImageResource(R.drawable.ic_circle);
@@ -149,7 +165,10 @@ public class TictactoeActivity extends AppCompatActivity {
 
                 if(startGame.equals("X")){
                     if (Utlis.TEMPLATE == 1){
-                        button2.setImageResource(R.drawable.green);
+                        button2.setImageResource(R.drawable.green_casino);
+                    }
+                    else if (Utlis.TEMPLATE == 3){
+                        button2.setImageResource(R.drawable.ic_yollow_pikachu);
                     }
                     else {
                         button2.setImageResource(R.drawable.ic_cross);
@@ -158,7 +177,10 @@ public class TictactoeActivity extends AppCompatActivity {
                     i++;
                 }else{
                     if (Utlis.TEMPLATE == 1){
-                        button2.setImageResource(R.drawable.black2);
+                        button2.setImageResource(R.drawable.black_casino);
+                    }
+                    else if (Utlis.TEMPLATE == 3){
+                        button2.setImageResource(R.drawable.ic_black_pikachu);
                     }
                     else {
                         button2.setImageResource(R.drawable.ic_circle);
@@ -181,7 +203,10 @@ public class TictactoeActivity extends AppCompatActivity {
 
                 if(startGame.equals("X")){
                     if (Utlis.TEMPLATE == 1){
-                        button3.setImageResource(R.drawable.green);
+                        button3.setImageResource(R.drawable.green_casino);
+                    }
+                    else if (Utlis.TEMPLATE == 3){
+                        button3.setImageResource(R.drawable.ic_yollow_pikachu);
                     }
                     else {
                         button3.setImageResource(R.drawable.ic_cross);
@@ -190,7 +215,10 @@ public class TictactoeActivity extends AppCompatActivity {
                     i++;
                 }else{
                     if (Utlis.TEMPLATE == 1){
-                        button3.setImageResource(R.drawable.black2);
+                        button3.setImageResource(R.drawable.black_casino);
+                    }
+                    else if (Utlis.TEMPLATE == 3){
+                        button3.setImageResource(R.drawable.ic_black_pikachu);
                     }
                     else {
                         button3.setImageResource(R.drawable.ic_circle);
@@ -213,7 +241,10 @@ public class TictactoeActivity extends AppCompatActivity {
 
                 if(startGame.equals("X")){
                     if (Utlis.TEMPLATE == 1){
-                        button4.setImageResource(R.drawable.green);
+                        button4.setImageResource(R.drawable.green_casino);
+                    }
+                    else if (Utlis.TEMPLATE == 3){
+                        button4.setImageResource(R.drawable.ic_yollow_pikachu);
                     }
                     else {
                         button4.setImageResource(R.drawable.ic_cross);
@@ -222,7 +253,10 @@ public class TictactoeActivity extends AppCompatActivity {
                     i++;
                 }else{
                     if (Utlis.TEMPLATE == 1){
-                        button4.setImageResource(R.drawable.black2);
+                        button4.setImageResource(R.drawable.black_casino);
+                    }
+                    else if (Utlis.TEMPLATE == 3){
+                        button4.setImageResource(R.drawable.ic_black_pikachu);
                     }
                     else {
                         button4.setImageResource(R.drawable.ic_circle);
@@ -245,7 +279,10 @@ public class TictactoeActivity extends AppCompatActivity {
 
                 if(startGame.equals("X")){
                     if (Utlis.TEMPLATE == 1){
-                        button5.setImageResource(R.drawable.green);
+                        button5.setImageResource(R.drawable.green_casino);
+                    }
+                    else if (Utlis.TEMPLATE == 3){
+                        button5.setImageResource(R.drawable.ic_yollow_pikachu);
                     }
                     else {
                         button5.setImageResource(R.drawable.ic_cross);
@@ -254,7 +291,10 @@ public class TictactoeActivity extends AppCompatActivity {
                     i++;
                 }else{
                     if (Utlis.TEMPLATE == 1){
-                        button5.setImageResource(R.drawable.black2);
+                        button5.setImageResource(R.drawable.black_casino);
+                    }
+                    else if (Utlis.TEMPLATE == 3){
+                        button5.setImageResource(R.drawable.ic_black_pikachu);
                     }
                     else {
                         button5.setImageResource(R.drawable.ic_circle);
@@ -277,7 +317,10 @@ public class TictactoeActivity extends AppCompatActivity {
 
                 if(startGame.equals("X")){
                     if (Utlis.TEMPLATE == 1){
-                        button6.setImageResource(R.drawable.green);
+                        button6.setImageResource(R.drawable.green_casino);
+                    }
+                    else if (Utlis.TEMPLATE == 3){
+                        button6.setImageResource(R.drawable.ic_yollow_pikachu);
                     }
                     else {
                         button6.setImageResource(R.drawable.ic_cross);
@@ -286,7 +329,10 @@ public class TictactoeActivity extends AppCompatActivity {
                     i++;
                 }else{
                     if (Utlis.TEMPLATE == 1){
-                        button6.setImageResource(R.drawable.black2);
+                        button6.setImageResource(R.drawable.black_casino);
+                    }
+                    else if (Utlis.TEMPLATE == 3){
+                        button6.setImageResource(R.drawable.ic_black_pikachu);
                     }
                     else {
                         button6.setImageResource(R.drawable.ic_circle);
@@ -309,7 +355,10 @@ public class TictactoeActivity extends AppCompatActivity {
 
                 if(startGame.equals("X")){
                     if (Utlis.TEMPLATE == 1){
-                        button7.setImageResource(R.drawable.green);
+                        button7.setImageResource(R.drawable.green_casino);
+                    }
+                    else if (Utlis.TEMPLATE == 3){
+                        button7.setImageResource(R.drawable.ic_yollow_pikachu);
                     }
                     else {
                         button7.setImageResource(R.drawable.ic_cross);
@@ -318,7 +367,10 @@ public class TictactoeActivity extends AppCompatActivity {
                     i++;
                 }else{
                     if (Utlis.TEMPLATE == 1){
-                        button7.setImageResource(R.drawable.black2);
+                        button7.setImageResource(R.drawable.black_casino);
+                    }
+                    else if (Utlis.TEMPLATE == 3){
+                        button7.setImageResource(R.drawable.ic_black_pikachu);
                     }
                     else {
                         button7.setImageResource(R.drawable.ic_circle);
@@ -341,7 +393,10 @@ public class TictactoeActivity extends AppCompatActivity {
 
                 if(startGame.equals("X")){
                     if (Utlis.TEMPLATE == 1){
-                        button8.setImageResource(R.drawable.green);
+                        button8.setImageResource(R.drawable.green_casino);
+                    }
+                    else if (Utlis.TEMPLATE == 3){
+                        button8.setImageResource(R.drawable.ic_yollow_pikachu);
                     }
                     else {
                         button8.setImageResource(R.drawable.ic_cross);
@@ -350,7 +405,10 @@ public class TictactoeActivity extends AppCompatActivity {
                     i++;
                 }else{
                     if (Utlis.TEMPLATE == 1){
-                        button8.setImageResource(R.drawable.black2);
+                        button8.setImageResource(R.drawable.black_casino);
+                    }
+                    else if (Utlis.TEMPLATE == 3){
+                        button8.setImageResource(R.drawable.ic_black_pikachu);
                     }
                     else {
                         button8.setImageResource(R.drawable.ic_circle);
@@ -374,7 +432,10 @@ public class TictactoeActivity extends AppCompatActivity {
 
                 if(startGame.equals("X")){
                     if (Utlis.TEMPLATE == 1){
-                        button9.setImageResource(R.drawable.green);
+                        button9.setImageResource(R.drawable.green_casino);
+                    }
+                    else if (Utlis.TEMPLATE == 3){
+                        button9.setImageResource(R.drawable.ic_yollow_pikachu);
                     }
                     else {
                         button9.setImageResource(R.drawable.ic_cross);
@@ -384,7 +445,10 @@ public class TictactoeActivity extends AppCompatActivity {
                 }
                 else{
                     if (Utlis.TEMPLATE == 1){
-                        button9.setImageResource(R.drawable.black2);
+                        button9.setImageResource(R.drawable.black_casino);
+                    }
+                    else if (Utlis.TEMPLATE == 3){
+                        button9.setImageResource(R.drawable.ic_black_pikachu);
                     }
                     else {
                         button9.setImageResource(R.drawable.ic_circle);

@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="10dp"
+    android:background="@drawable/bg_app"
     tools:context=".StartActivity">
 
     <LinearLayout
@@ -15,27 +15,107 @@
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
         >
-        <Button
-            android:onClick="tictacPlay"
+        <androidx.cardview.widget.CardView
+            android:id="@+id/template1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Tictac"
+            app:cardCornerRadius="10dp"
+            android:layout_marginTop="10dp"
+            app:cardBackgroundColor="#FFEB3B"
             android:layout_gravity="center"
-            />
-        <Button
+            android:onClick="tictacPlay"
+            >
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/ic_tac_tic_toe_icon"
+                    android:layout_margin="10dp"
+                    />
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tictac"
+                    android:layout_gravity="center"
+                    android:background="@color/white"
+                    android:textColor="@color/black"
+                    android:layout_margin="10dp"
+                    />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/template1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Brain Quiz"
+            app:cardCornerRadius="10dp"
+            android:layout_marginTop="10dp"
+            app:cardBackgroundColor="#96DDE3"
             android:layout_gravity="center"
             android:onClick="brainQuizplay"
-            />
-        <Button
+            >
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Brain Quiz"
+                    android:layout_gravity="center"
+                    android:background="@color/white"
+                    android:textColor="@color/black"
+                    android:layout_margin="10dp"
+                    />
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/ic_quiz"
+                    android:layout_margin="10dp"
+                    />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/template1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Roulette"
+            app:cardCornerRadius="10dp"
+            android:layout_marginTop="10dp"
+            app:cardBackgroundColor="#DC39A0"
             android:layout_gravity="center"
             android:onClick="roulette"
-            />
+            >
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/ic_roulette"
+                    android:layout_margin="10dp"
+                    />
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Roulette"
+                    android:layout_gravity="center"
+                    android:background="@color/white"
+                    android:textColor="@color/black"
+                    android:layout_margin="10dp"
+                    />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
     </LinearLayout>
 
 </RelativeLayout>
