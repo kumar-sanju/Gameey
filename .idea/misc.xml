@@ -3,17 +3,24 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/WORKSPACE/Program file/Gameey/app/src/main/res/drawable/ic_baseline_emoji_events_24.xml" value="0.1295" />
+        <entry key="..\:/WORKSPACE/Program file/Gameey/app/src/main/res/drawable/ic_baseline_play_arrow_24.xml" value="0.1295" />
         <entry key="..\:/WORKSPACE/Program file/Gameey/app/src/main/res/drawable/ic_black_pikachu.xml" value="0.1" />
         <entry key="..\:/WORKSPACE/Program file/Gameey/app/src/main/res/drawable/ic_circle.xml" value="0.1295" />
         <entry key="..\:/WORKSPACE/Program file/Gameey/app/src/main/res/drawable/ic_cross.xml" value="0.1295" />
         <entry key="..\:/WORKSPACE/Program file/Gameey/app/src/main/res/drawable/ic_downward.xml" value="0.1" />
         <entry key="..\:/WORKSPACE/Program file/Gameey/app/src/main/res/drawable/ic_quiz.xml" value="0.1" />
+        <entry key="..\:/WORKSPACE/Program file/Gameey/app/src/main/res/drawable/ic_space_shooter.xml" value="0.1295" />
         <entry key="..\:/WORKSPACE/Program file/Gameey/app/src/main/res/layout/activity_brain_quiz.xml" value="0.18802083333333333" />
         <entry key="..\:/WORKSPACE/Program file/Gameey/app/src/main/res/layout/activity_main.xml" value="0.18802083333333333" />
         <entry key="..\:/WORKSPACE/Program file/Gameey/app/src/main/res/layout/activity_roulette.xml" value="0.18802083333333333" />
+        <entry key="..\:/WORKSPACE/Program file/Gameey/app/src/main/res/layout/activity_snake.xml" value="0.18802083333333333" />
+        <entry key="..\:/WORKSPACE/Program file/Gameey/app/src/main/res/layout/activity_space_shooter.xml" value="0.18802083333333333" />
         <entry key="..\:/WORKSPACE/Program file/Gameey/app/src/main/res/layout/activity_start.xml" value="0.18802083333333333" />
         <entry key="..\:/WORKSPACE/Program file/Gameey/app/src/main/res/layout/activity_tictac.xml" value="0.18802083333333333" />
         <entry key="..\:/WORKSPACE/Program file/Gameey/app/src/main/res/layout/activity_tictactoe.xml" value="0.18802083333333333" />
+        <entry key="..\:/WORKSPACE/Program file/Gameey/app/src/main/res/layout/game_end.xml" value="0.18802083333333333" />
+        <entry key="..\:/WORKSPACE/Program file/Gameey/app/src/main/res/layout/start.xml" value="0.18802083333333333" />
         <entry key="..\:/WORKSPACE/Program file/Gameey/app/src/main/res/layout/tictac.xml" value="0.18802083333333333" />
       </map>
     </option>

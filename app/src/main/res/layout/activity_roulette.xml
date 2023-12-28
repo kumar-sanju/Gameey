@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg_app"
     tools:context=".RouletteActivity">
 
     <Button
@@ -12,6 +13,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="SPIN"
+        android:background="@color/white"
+        android:textColor="@color/black"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="20dp"
@@ -20,6 +23,7 @@
     <TextView
         android:id="@+id/textView"
         android:textSize="32dp"
+        android:textColor="@color/white"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
@@ -35,13 +39,13 @@
         android:layout_centerVertical="true"
         android:src="@drawable/router"
         />
+
     <ImageView
         android:id="@+id/ic_pointer"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:src="@drawable/ic_downward"
-        android:layout_centerHorizontal="true"
         android:layout_above="@+id/ic_wheel"
-        />
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/ic_downward" />
 
 </RelativeLayout>
