@@ -10,6 +10,9 @@ import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -49,6 +52,10 @@ public class BrainQuizActivity extends AppCompatActivity {
                 playAgain(findViewById(R.id.playAgainBtn));
             }
         });
+
+        AdView adView = (AdView)findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        adView.loadAd(adRequest);
 
     }
 

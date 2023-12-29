@@ -11,6 +11,9 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+
 import java.util.Random;
 
 public class RouletteActivity extends AppCompatActivity {
@@ -28,6 +31,10 @@ public class RouletteActivity extends AppCompatActivity {
         final TextView textView = findViewById(R.id.textView);
         final ImageView ic_wheel = findViewById(R.id.ic_wheel);
         ImageView ic_pointer = findViewById(R.id.ic_pointer);
+
+        AdView adView = (AdView)findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        adView.loadAd(adRequest);
 
         random = new Random();
 

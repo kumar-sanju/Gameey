@@ -3,49 +3,66 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg_app"
     tools:context=".RouletteActivity">
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/adView"
+        >
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SPIN"
+            android:background="@color/white"
+            android:textColor="@color/black"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"
+            />
+
+        <TextView
+            android:id="@+id/textView"
+            android:textSize="32dp"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:layout_centerVertical="true"
+            />
+
+        <ImageView
+            android:id="@+id/ic_wheel"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/router"
+            />
+
+        <ImageView
+            android:id="@+id/ic_pointer"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_above="@+id/ic_wheel"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_downward" />
+    </RelativeLayout>
+
+    <com.google.android.gms.ads.AdView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="SPIN"
-        android:background="@color/white"
-        android:textColor="@color/black"
+        android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="20dp"
-        />
-
-    <TextView
-        android:id="@+id/textView"
-        android:textSize="32dp"
-        android:textColor="@color/white"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:layout_centerVertical="true"
-        />
-
-    <ImageView
-        android:id="@+id/ic_wheel"
-        android:layout_width="300dp"
-        android:layout_height="300dp"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:src="@drawable/router"
-        />
-
-    <ImageView
-        android:id="@+id/ic_pointer"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_above="@+id/ic_wheel"
-        android:layout_centerHorizontal="true"
-        android:src="@drawable/ic_downward" />
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/ad_mob_banner_id"
+        android:id="@+id/adView">
+    </com.google.android.gms.ads.AdView>
 
 </RelativeLayout>

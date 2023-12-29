@@ -12,6 +12,8 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 import com.smart.gameey.R;
 
 public class Start extends AppCompatActivity {
@@ -31,6 +33,10 @@ public class Start extends AppCompatActivity {
         setContentView(R.layout.start);
         saveStateButton = (Button) findViewById(R.id.save_state_butt);
         switchButton = (Switch) findViewById(R.id.switch_butt);
+
+        AdView adView = (AdView)findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        adView.loadAd(adRequest);
 
         saveStateButton.setOnClickListener(new View.OnClickListener() {
             @Override

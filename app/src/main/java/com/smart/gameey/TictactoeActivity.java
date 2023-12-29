@@ -14,6 +14,9 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+
 public class TictactoeActivity extends AppCompatActivity {
 
     //    variables for image view
@@ -61,6 +64,10 @@ public class TictactoeActivity extends AppCompatActivity {
         mainLayout = findViewById(R.id.mainLayout);
         templateLayout = findViewById(R.id.templateLayout);
         mainLayout.setVisibility(View.GONE);
+
+        AdView adView = (AdView)findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        adView.loadAd(adRequest);
 
         template1 = findViewById(R.id.template1);
         template2 = findViewById(R.id.template2);

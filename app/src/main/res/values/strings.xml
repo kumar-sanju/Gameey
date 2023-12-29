@@ -3,9 +3,9 @@
 
     <!--Test-->
     <string name="ad_mob_native_id">ca-app-pub-8641387738393290/7139591987</string>
-    <string name="ad_mob_app_id">ca-app-pub-8641387738393290~6209653694</string>
-    <string name="ad_mob_banner_id">ca-app-pub-8641387738393290/2270408689</string>
-    <string name="ad_mob_app_open_id">ca-app-pub-8641387738393290/2270408689</string>
+    <string name="ad_mob_app_id">ca-app-pub-3940256099942544~3347511713</string>
+    <string name="ad_mob_banner_id">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="ad_mob_app_open_id">ca-app-pub-3940256099942544/6300978111</string>
     <string name="ad_mob_interstitial_id">ca-app-pub-8641387738393290/1695693618</string>
 
     <!--Live-->

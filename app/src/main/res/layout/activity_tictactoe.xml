@@ -4,392 +4,409 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/bg_app"
     tools:context=".TictactoeActivity">
 
-    <LinearLayout
-        android:id="@+id/templateLayout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:orientation="vertical">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Click One \nTemplate"
-            android:textAlignment="center"
-            android:textSize="25sp"
-            android:textStyle="bold"
-            android:textColor="@color/white"
-            android:layout_gravity="center"
-            android:id="@+id/ScoreX">
-
-        </TextView>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="--You Can See Your Live Score On Screen--"
-            android:textAlignment="center"
-            android:textSize="15sp"
-            android:textStyle="bold"
-            android:textColor="#F35555"
-            android:layout_gravity="center">
-
-        </TextView>
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/template1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:cardCornerRadius="10dp"
-            android:layout_marginTop="10dp"
-            app:cardBackgroundColor="#E39696"
-            >
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:orientation="horizontal">
-                <ImageView
-                    android:layout_width="90dp"
-                    android:layout_height="90dp"
-                    android:src="@drawable/green_casino"
-                    android:layout_margin="10dp"
-                    />
-                <ImageView
-                    android:layout_width="90dp"
-                    android:layout_height="90dp"
-                    android:src="@drawable/black_casino"
-                    android:layout_margin="10dp"
-                    />
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/template2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:cardCornerRadius="10dp"
-            android:layout_marginTop="20dp"
-            app:cardBackgroundColor="#9B96E3"
-            >
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:orientation="horizontal">
-                <ImageView
-                    android:layout_width="90dp"
-                    android:layout_height="90dp"
-                    android:src="@drawable/ic_cross"
-                    android:layout_margin="10dp"
-                    />
-                <ImageView
-                    android:layout_width="90dp"
-                    android:layout_height="90dp"
-                    android:src="@drawable/ic_circle"
-                    android:layout_margin="10dp"
-                    />
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/template3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:cardCornerRadius="10dp"
-            android:layout_marginTop="20dp"
-            app:cardBackgroundColor="#CAF4CE"
-            >
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:orientation="horizontal">
-                <ImageView
-                    android:layout_width="90dp"
-                    android:layout_height="90dp"
-                    android:src="@drawable/ic_yollow_pikachu"
-                    android:layout_margin="10dp"
-                    />
-                <ImageView
-                    android:layout_width="90dp"
-                    android:layout_height="90dp"
-                    android:src="@drawable/ic_black_pikachu"
-                    android:layout_margin="10dp"
-                    />
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-    </LinearLayout>
-
     <RelativeLayout
-        android:id="@+id/mainLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:visibility="gone"
+        android:layout_above="@+id/adView"
         >
-        <!--    first horizontal line -->
-        <RelativeLayout
-            android:layout_width="330dp"
-            android:layout_height="8dp"
-            android:background="#FF8800"
-            android:layout_centerHorizontal="true"
-            android:layout_above="@+id/button5"
-            android:layout_marginBottom="8dp">
-        </RelativeLayout>
-
-        <!--    second horizontal line -->
-        <RelativeLayout
-            android:layout_width="330dp"
-            android:layout_height="8dp"
-            android:background="#FF8800"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@+id/button5"
-            android:layout_marginTop="8dp">
-        </RelativeLayout>
-
-        <!--    First Vertical line -->
-        <RelativeLayout
-            android:layout_width="8dp"
-            android:layout_height="350dp"
-            android:background="#FF8800"
-            android:layout_centerVertical="true"
-            android:layout_toLeftOf="@+id/button5"
-            android:layout_marginRight="-14dp">
-        </RelativeLayout>
-
-        <!--    Second Vertical line -->
-        <RelativeLayout
-            android:layout_width="8dp"
-            android:layout_height="350dp"
-            android:background="#FF8800"
-            android:layout_centerVertical="true"
-            android:layout_toRightOf="@+id/button5"
-            android:layout_marginLeft="-14dp">
-        </RelativeLayout>
-
-        <!--    1 st button (first row first button)-->
-        <RelativeLayout
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_centerInParent="true"
-            android:id="@+id/button1"
-            android:layout_above="@+id/button5"
-            android:layout_marginBottom="20dp"
-            android:layout_toLeftOf="@+id/button2"
-            android:background="#212427">
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/imageView">
-
-            </ImageView>
-        </RelativeLayout>
-
-        <!--    2 nd button (first row middle button)-->
-        <RelativeLayout
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_centerInParent="true"
-            android:id="@+id/button2"
-            android:layout_above="@+id/button5"
-            android:layout_marginBottom="20dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:background="#212427">
-
-            <ImageView
-                android:id="@+id/imageView1"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-            </ImageView>
-        </RelativeLayout>
-
-        <!--    3 rd button (first row third button)-->
-        <RelativeLayout
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_centerInParent="true"
-            android:id="@+id/button3"
-            android:layout_above="@+id/button5"
-            android:layout_marginBottom="20dp"
-            android:layout_toRightOf="@+id/button2"
-            android:background="#212427">
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/imageView2">
-
-            </ImageView>
-        </RelativeLayout>
-
-        <!--    4 th button (second row first button) -->
-        <RelativeLayout
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_centerInParent="true"
-            android:id="@+id/button4"
-            android:layout_toLeftOf="@+id/button5"
-            android:background="#212427">
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/imageView3">
-
-            </ImageView>
-        </RelativeLayout>
-
-        <!--    center button 5th button -->
-        <RelativeLayout
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_centerInParent="true"
-            android:id="@+id/button5"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:background="#212427">
-
-            <ImageView
-                android:id="@+id/imageView4"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-            </ImageView>
-        </RelativeLayout>
-
-        <!--     6th button (second row third  button) -->
-        <RelativeLayout
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_centerInParent="true"
-            android:id="@+id/btn6"
-            android:layout_toRightOf="@+id/button5"
-            android:background="#212427">
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/imageView5">
-
-            </ImageView>
-        </RelativeLayout>
-
-        <!--    7 th button (third row first button)-->
-        <RelativeLayout
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_centerInParent="true"
-            android:id="@+id/btn7"
-            android:layout_below="@+id/button5"
-            android:layout_marginTop="20dp"
-            android:layout_toLeftOf="@+id/button5"
-            android:background="#212427">
-
-            <ImageView
-                android:id="@+id/imageView6"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-            </ImageView>
-        </RelativeLayout>
-
-        <!--    8 th button (third row middle button)-->
-        <RelativeLayout
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_centerInParent="true"
-            android:id="@+id/btn8"
-            android:layout_below="@+id/button5"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:background="#212427">
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/imageView7">
-
-            </ImageView>
-        </RelativeLayout>
-
-        <!--    9 th button (third row third button)-->
-        <RelativeLayout
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_centerInParent="true"
-            android:id="@+id/btn9"
-            android:layout_below="@+id/button5"
-            android:layout_marginTop="20dp"
-            android:layout_toRightOf="@+id/button5"
-            android:background="#212427">
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/imageView8">
-
-            </ImageView>
-        </RelativeLayout>
-
-        <!--    score board-->
         <LinearLayout
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:paddingRight="40dp"
-            android:paddingLeft="40dp"
-            android:layout_marginTop="40dp"
-            android:layout_centerHorizontal="true">
-
-
-            <!--        score of X-->
+            android:id="@+id/templateLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Score X :- 0"
-                android:textSize="30sp"
+                android:text="Click One \nTemplate"
+                android:textAlignment="center"
+                android:textSize="25sp"
                 android:textStyle="bold"
                 android:textColor="@color/white"
+                android:layout_gravity="center"
                 android:id="@+id/ScoreX">
 
             </TextView>
 
-            <!--  score of Y-->
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Score Y :- 0"
-                android:textSize="30sp"
+                android:text="--You Can See Your Live Score On Screen--"
+                android:textAlignment="center"
+                android:textSize="15sp"
                 android:textStyle="bold"
-                android:textColor="@color/white"
-                android:id="@+id/ScoreY">
+                android:textColor="#F35555"
+                android:layout_gravity="center">
 
             </TextView>
 
+            <androidx.cardview.widget.CardView
+                android:id="@+id/template1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
+                android:layout_marginTop="10dp"
+                app:cardBackgroundColor="#E39696"
+                >
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:src="@drawable/green_casino"
+                        android:layout_margin="10dp"
+                        />
+                    <ImageView
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:src="@drawable/black_casino"
+                        android:layout_margin="10dp"
+                        />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/template2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
+                android:layout_marginTop="20dp"
+                app:cardBackgroundColor="#9B96E3"
+                >
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:src="@drawable/ic_cross"
+                        android:layout_margin="10dp"
+                        />
+                    <ImageView
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:src="@drawable/ic_circle"
+                        android:layout_margin="10dp"
+                        />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/template3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
+                android:layout_marginTop="20dp"
+                app:cardBackgroundColor="#CAF4CE"
+                >
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:src="@drawable/ic_yollow_pikachu"
+                        android:layout_margin="10dp"
+                        />
+                    <ImageView
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:src="@drawable/ic_black_pikachu"
+                        android:layout_margin="10dp"
+                        />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
         </LinearLayout>
 
-        <!--    Reset button-->
-        <Button
-            android:layout_width="320dp"
-            android:layout_height="50dp"
-            android:layout_below="@+id/btn8"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="80dp"
-            android:text="Reset"
-            android:id="@+id/Reset"
-            android:textSize="15sp"
-            android:textColor="@color/white"
-            android:backgroundTint="@android:color/holo_orange_dark">
+        <RelativeLayout
+            android:id="@+id/mainLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            >
+            <!--    first horizontal line -->
+            <RelativeLayout
+                android:layout_width="330dp"
+                android:layout_height="8dp"
+                android:background="#FF8800"
+                android:layout_centerHorizontal="true"
+                android:layout_above="@+id/button5"
+                android:layout_marginBottom="8dp">
+            </RelativeLayout>
 
-        </Button>
+            <!--    second horizontal line -->
+            <RelativeLayout
+                android:layout_width="330dp"
+                android:layout_height="8dp"
+                android:background="#FF8800"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/button5"
+                android:layout_marginTop="8dp">
+            </RelativeLayout>
+
+            <!--    First Vertical line -->
+            <RelativeLayout
+                android:layout_width="8dp"
+                android:layout_height="350dp"
+                android:background="#FF8800"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/button5"
+                android:layout_marginRight="-14dp">
+            </RelativeLayout>
+
+            <!--    Second Vertical line -->
+            <RelativeLayout
+                android:layout_width="8dp"
+                android:layout_height="350dp"
+                android:background="#FF8800"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/button5"
+                android:layout_marginLeft="-14dp">
+            </RelativeLayout>
+
+            <!--    1 st button (first row first button)-->
+            <RelativeLayout
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_centerInParent="true"
+                android:id="@+id/button1"
+                android:layout_above="@+id/button5"
+                android:layout_marginBottom="20dp"
+                android:layout_toLeftOf="@+id/button2"
+                android:background="#212427">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/imageView">
+
+                </ImageView>
+            </RelativeLayout>
+
+            <!--    2 nd button (first row middle button)-->
+            <RelativeLayout
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_centerInParent="true"
+                android:id="@+id/button2"
+                android:layout_above="@+id/button5"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="#212427">
+
+                <ImageView
+                    android:id="@+id/imageView1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                </ImageView>
+            </RelativeLayout>
+
+            <!--    3 rd button (first row third button)-->
+            <RelativeLayout
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_centerInParent="true"
+                android:id="@+id/button3"
+                android:layout_above="@+id/button5"
+                android:layout_marginBottom="20dp"
+                android:layout_toRightOf="@+id/button2"
+                android:background="#212427">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/imageView2">
+
+                </ImageView>
+            </RelativeLayout>
+
+            <!--    4 th button (second row first button) -->
+            <RelativeLayout
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_centerInParent="true"
+                android:id="@+id/button4"
+                android:layout_toLeftOf="@+id/button5"
+                android:background="#212427">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/imageView3">
+
+                </ImageView>
+            </RelativeLayout>
+
+            <!--    center button 5th button -->
+            <RelativeLayout
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_centerInParent="true"
+                android:id="@+id/button5"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="#212427">
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                </ImageView>
+            </RelativeLayout>
+
+            <!--     6th button (second row third  button) -->
+            <RelativeLayout
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_centerInParent="true"
+                android:id="@+id/btn6"
+                android:layout_toRightOf="@+id/button5"
+                android:background="#212427">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/imageView5">
+
+                </ImageView>
+            </RelativeLayout>
+
+            <!--    7 th button (third row first button)-->
+            <RelativeLayout
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_centerInParent="true"
+                android:id="@+id/btn7"
+                android:layout_below="@+id/button5"
+                android:layout_marginTop="20dp"
+                android:layout_toLeftOf="@+id/button5"
+                android:background="#212427">
+
+                <ImageView
+                    android:id="@+id/imageView6"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                </ImageView>
+            </RelativeLayout>
+
+            <!--    8 th button (third row middle button)-->
+            <RelativeLayout
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_centerInParent="true"
+                android:id="@+id/btn8"
+                android:layout_below="@+id/button5"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="#212427">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/imageView7">
+
+                </ImageView>
+            </RelativeLayout>
+
+            <!--    9 th button (third row third button)-->
+            <RelativeLayout
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_centerInParent="true"
+                android:id="@+id/btn9"
+                android:layout_below="@+id/button5"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@+id/button5"
+                android:background="#212427">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/imageView8">
+
+                </ImageView>
+            </RelativeLayout>
+
+            <!--    score board-->
+            <LinearLayout
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingRight="40dp"
+                android:paddingLeft="40dp"
+                android:layout_marginTop="40dp"
+                android:layout_centerHorizontal="true">
+
+
+                <!--        score of X-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Score X :- 0"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:id="@+id/ScoreX">
+
+                </TextView>
+
+                <!--  score of Y-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Score Y :- 0"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:id="@+id/ScoreY">
+
+                </TextView>
+
+            </LinearLayout>
+
+            <!--    Reset button-->
+            <Button
+                android:layout_width="320dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/btn8"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="80dp"
+                android:text="Reset"
+                android:id="@+id/Reset"
+                android:textSize="15sp"
+                android:textColor="@color/white"
+                android:backgroundTint="@android:color/holo_orange_dark">
+
+            </Button>
+        </RelativeLayout>
     </RelativeLayout>
+
+    <com.google.android.gms.ads.AdView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/ad_mob_banner_id"
+        android:id="@+id/adView">
+    </com.google.android.gms.ads.AdView>
 
 
 </RelativeLayout>
