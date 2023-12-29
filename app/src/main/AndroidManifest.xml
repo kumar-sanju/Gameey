@@ -1,47 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.sanju.gameey">
+    package="com.smart.gameey">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/ic_launcher_foreground"
+        android:extractNativeLibs="true"
+        android:hardwareAccelerated="true"
+        android:largeHeap="true"
+        android:requestLegacyExternalStorage="true"
+        android:usesCleartextTraffic="true"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/ic_launcher_foreground"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".spaceShooter.Start"
+            android:name="com.smart.gameey.spaceShooter.Start"
             android:screenOrientation="landscape"
             android:exported="true">
-
-<!--            <intent-filter>-->
-<!--                <action android:name="android.intent.action.MAIN" />-->
-
-<!--                <category android:name="android.intent.category.LAUNCHER" />-->
-<!--            </intent-filter>-->
         </activity>
-        <activity android:name=".spaceShooter.SpaceShooterActivity"
+        <activity android:name="com.smart.gameey.spaceShooter.SpaceShooterActivity"
             android:screenOrientation="landscape">
         </activity>
-        <activity android:name=".spaceShooter.EndGame"
+        <activity android:name="com.smart.gameey.spaceShooter.EndGame"
             android:screenOrientation="landscape">
         </activity>
-
 
         <activity
-            android:name=".TictactoeActivity"
-            android:exported="false" />
-        <activity android:name=".RouletteActivity" />
-        <activity android:name=".sankeGame.SnakeActivity" />
-        <activity android:name=".BrainQuizActivity" />
-        <activity android:name=".StartActivity">
+            android:name="com.smart.gameey.TictactoeActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.smart.gameey.RouletteActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.smart.gameey.sankeGame.SnakeActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.smart.gameey.BrainQuizActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.smart.gameey.StartActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".TictacActivity" />
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="@string/ad_mob_app_id" />
+
     </application>
 
 </manifest>

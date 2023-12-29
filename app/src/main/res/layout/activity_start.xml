@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -8,191 +8,204 @@
     android:background="@drawable/bg_app"
     tools:context=".StartActivity">
 
-    <LinearLayout
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/adView"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:gravity="center"
+            >
+            <androidx.cardview.widget.CardView
+                android:id="@+id/template1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
+                android:layout_marginTop="10dp"
+                app:cardBackgroundColor="#FFEB3B"
+                android:layout_gravity="center"
+                >
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/ic_tac_tic_toe_icon"
+                        android:layout_margin="10dp"
+                        />
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tictac"
+                        android:layout_gravity="center"
+                        android:background="@color/white"
+                        android:textColor="@color/black"
+                        android:layout_margin="10dp"
+                        android:onClick="tictacPlay"
+                        android:textSize="15sp"
+                        />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/template1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
+                android:layout_marginTop="10dp"
+                app:cardBackgroundColor="#96DDE3"
+                android:layout_gravity="center"
+                android:onClick="brainQuizplay"
+                >
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Brain Quiz"
+                        android:layout_gravity="center"
+                        android:background="@color/white"
+                        android:textColor="@color/black"
+                        android:layout_margin="10dp"
+                        android:onClick="brainQuizplay"
+                        android:textSize="15sp"
+                        />
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/ic_quiz"
+                        android:layout_margin="10dp"
+                        />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/template1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
+                android:layout_marginTop="10dp"
+                app:cardBackgroundColor="#DC39A0"
+                android:layout_gravity="center"
+                android:onClick="roulette"
+                >
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/ic_roulette"
+                        android:layout_margin="10dp"
+                        />
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Roulette"
+                        android:onClick="roulette"
+                        android:layout_gravity="center"
+                        android:background="@color/white"
+                        android:textColor="@color/black"
+                        android:layout_margin="10dp"
+                        android:textSize="15sp"
+                        />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
+                android:layout_marginTop="10dp"
+                app:cardBackgroundColor="#DC3939"
+                android:layout_gravity="center"
+                android:onClick="snake"
+                >
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Snake"
+                        android:onClick="snake"
+                        android:layout_gravity="center"
+                        android:background="@color/white"
+                        android:textColor="@color/black"
+                        android:layout_margin="10dp"
+                        android:padding="10dp"
+                        android:textSize="15sp"
+                        />
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/ic_snake"
+                        android:layout_margin="10dp"
+                        />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
+                android:layout_marginTop="10dp"
+                app:cardBackgroundColor="#39DC5C"
+                android:layout_gravity="center"
+                android:onClick="spaceShooter"
+                >
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/ic_space_shooter"
+                        android:layout_margin="10dp"
+                        />
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Space Shooter"
+                        android:onClick="spaceShooter"
+                        android:layout_gravity="center"
+                        android:textSize="10sp"
+                        android:background="@color/white"
+                        android:textColor="@color/black"
+                        android:layout_margin="10dp"
+                        android:padding="10dp"
+                        />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/adView"
+        android:layout_alignParentBottom="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_gravity="center"
-        android:gravity="center"
-        >
-        <androidx.cardview.widget.CardView
-            android:id="@+id/template1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:cardCornerRadius="10dp"
-            android:layout_marginTop="10dp"
-            app:cardBackgroundColor="#FFEB3B"
-            android:layout_gravity="center"
-            >
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                >
-                <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:src="@drawable/ic_tac_tic_toe_icon"
-                    android:layout_margin="10dp"
-                    />
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Tictac"
-                    android:layout_gravity="center"
-                    android:background="@color/white"
-                    android:textColor="@color/black"
-                    android:layout_margin="10dp"
-                    android:onClick="tictacPlay"
-                    android:textSize="15sp"
-                    />
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
+        />
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/template1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:cardCornerRadius="10dp"
-            android:layout_marginTop="10dp"
-            app:cardBackgroundColor="#96DDE3"
-            android:layout_gravity="center"
-            android:onClick="brainQuizplay"
-            >
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                >
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Brain Quiz"
-                    android:layout_gravity="center"
-                    android:background="@color/white"
-                    android:textColor="@color/black"
-                    android:layout_margin="10dp"
-                    android:onClick="brainQuizplay"
-                    android:textSize="15sp"
-                    />
-
-                <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:src="@drawable/ic_quiz"
-                    android:layout_margin="10dp"
-                    />
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/template1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:cardCornerRadius="10dp"
-            android:layout_marginTop="10dp"
-            app:cardBackgroundColor="#DC39A0"
-            android:layout_gravity="center"
-            android:onClick="roulette"
-            >
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                >
-                <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:src="@drawable/ic_roulette"
-                    android:layout_margin="10dp"
-                    />
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Roulette"
-                    android:onClick="roulette"
-                    android:layout_gravity="center"
-                    android:background="@color/white"
-                    android:textColor="@color/black"
-                    android:layout_margin="10dp"
-                    android:textSize="15sp"
-                    />
-
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:cardCornerRadius="10dp"
-            android:layout_marginTop="10dp"
-            app:cardBackgroundColor="#DC3939"
-            android:layout_gravity="center"
-            android:onClick="snake"
-            >
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                >
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Snake"
-                    android:onClick="snake"
-                    android:layout_gravity="center"
-                    android:background="@color/white"
-                    android:textColor="@color/black"
-                    android:layout_margin="10dp"
-                    android:padding="10dp"
-                    android:textSize="15sp"
-                    />
-                <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:src="@drawable/ic_snake"
-                    android:layout_margin="10dp"
-                    />
-
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:cardCornerRadius="10dp"
-            android:layout_marginTop="10dp"
-            app:cardBackgroundColor="#39DC5C"
-            android:layout_gravity="center"
-            android:onClick="spaceShooter"
-            >
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                >
-                <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:src="@drawable/ic_space_shooter"
-                    android:layout_margin="10dp"
-                    />
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Space Shooter"
-                    android:onClick="spaceShooter"
-                    android:layout_gravity="center"
-                    android:textSize="10sp"
-                    android:background="@color/white"
-                    android:textColor="@color/black"
-                    android:layout_margin="10dp"
-                    android:padding="10dp"
-                    />
-
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-    </LinearLayout>
-
-</ScrollView>
+</RelativeLayout>

@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">Gameey</string>
+
+    <!--Test-->
+    <string name="ad_mob_native_id">ca-app-pub-8641387738393290/7139591987</string>
+    <string name="ad_mob_app_id">ca-app-pub-8641387738393290~6209653694</string>
+    <string name="ad_mob_banner_id">ca-app-pub-8641387738393290/2270408689</string>
+    <string name="ad_mob_app_open_id">ca-app-pub-8641387738393290/2270408689</string>
+    <string name="ad_mob_interstitial_id">ca-app-pub-8641387738393290/1695693618</string>
+
+    <!--Live-->
+    <string name="ad_mob_native_id_live">ca-app-pub-8641387738393290/2206636563</string>
+    <string name="ad_mob_banner_id_live">ca-app-pub-8641387738393290/1103693484</string>
+    <string name="ad_mob_interstitial_id_live">ca-app-pub-8641387738393290/3403349921</string>
+    <string name="ad_mob_app_id_live">ca-app-pub-8641387738393290~8299657229</string>
+    <string name="ad_mob_app_open_id_live">ca-app-pub-8641387738393290/1103693484</string>
+
+
 </resources>
