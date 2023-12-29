@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/WORKSPACE/Program file/Gameey/app/src/main/res/drawable-v24/ic_update.xml" value="0.1295" />
+        <entry key="..\:/WORKSPACE/Program file/Gameey/app/src/main/res/drawable/ic_add.xml" value="0.1295" />
         <entry key="..\:/WORKSPACE/Program file/Gameey/app/src/main/res/drawable/ic_baseline_emoji_events_24.xml" value="0.1295" />
         <entry key="..\:/WORKSPACE/Program file/Gameey/app/src/main/res/drawable/ic_baseline_play_arrow_24.xml" value="0.1295" />
         <entry key="..\:/WORKSPACE/Program file/Gameey/app/src/main/res/drawable/ic_black_pikachu.xml" value="0.1" />
@@ -13,6 +14,8 @@
         <entry key="..\:/WORKSPACE/Program file/Gameey/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1295" />
         <entry key="..\:/WORKSPACE/Program file/Gameey/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.1295" />
         <entry key="..\:/WORKSPACE/Program file/Gameey/app/src/main/res/drawable/ic_quiz.xml" value="0.1" />
+        <entry key="..\:/WORKSPACE/Program file/Gameey/app/src/main/res/drawable/ic_rate.xml" value="0.1295" />
+        <entry key="..\:/WORKSPACE/Program file/Gameey/app/src/main/res/drawable/ic_share.xml" value="0.1295" />
         <entry key="..\:/WORKSPACE/Program file/Gameey/app/src/main/res/drawable/ic_space_shooter.xml" value="0.1295" />
         <entry key="..\:/WORKSPACE/Program file/Gameey/app/src/main/res/layout/activity_brain_quiz.xml" value="0.18802083333333333" />
         <entry key="..\:/WORKSPACE/Program file/Gameey/app/src/main/res/layout/activity_main.xml" value="0.18802083333333333" />
@@ -26,6 +29,7 @@
         <entry key="..\:/WORKSPACE/Program file/Gameey/app/src/main/res/layout/start.xml" value="0.18802083333333333" />
         <entry key="..\:/WORKSPACE/Program file/Gameey/app/src/main/res/layout/tictac.xml" value="0.18802083333333333" />
         <entry key="..\:/WORKSPACE/Program file/Gameey/app/src/main/res/layout/update_alert.xml" value="0.18802083333333333" />
+        <entry key="..\:/WORKSPACE/Program file/Gameey/app/src/main/res/menu/expandable_menu.xml" value="0.18802083333333333" />
       </map>
     </option>
   </component>
