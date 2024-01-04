@@ -65,9 +65,9 @@ public class TictactoeActivity extends AppCompatActivity {
         templateLayout = findViewById(R.id.templateLayout);
         mainLayout.setVisibility(View.GONE);
 
-        AdView adView = (AdView)findViewById(R.id.adView);
-        AdRequest adRequest = new AdRequest.Builder().build();
-        adView.loadAd(adRequest);
+//        AdView adView = (AdView)findViewById(R.id.adView);
+//        AdRequest adRequest = new AdRequest.Builder().build();
+//        adView.loadAd(adRequest);
 
         template1 = findViewById(R.id.template1);
         template2 = findViewById(R.id.template2);

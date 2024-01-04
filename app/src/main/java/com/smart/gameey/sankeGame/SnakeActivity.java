@@ -39,9 +39,9 @@ public class SnakeActivity extends AppCompatActivity {
         txt_best_score = findViewById(R.id.txt_best_score);
         dialogScore();
 
-        AdView adView = (AdView)findViewById(R.id.adView);
-        AdRequest adRequest = new AdRequest.Builder().build();
-        adView.loadAd(adRequest);
+//        AdView adView = (AdView)findViewById(R.id.adView);
+//        AdRequest adRequest = new AdRequest.Builder().build();
+//        adView.loadAd(adRequest);
     }
 
     private void dialogScore() {

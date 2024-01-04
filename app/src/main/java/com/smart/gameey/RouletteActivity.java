@@ -21,26 +21,29 @@ public class RouletteActivity extends AppCompatActivity {
     Random random;
     int degree = 0, degree_old = 0;
     private static final float FACTOR = 4.86f;
+    Button button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_roulette);
 
-        Button button = findViewById(R.id.button);
+        button = findViewById(R.id.button);
         final TextView textView = findViewById(R.id.textView);
         final ImageView ic_wheel = findViewById(R.id.ic_wheel);
         ImageView ic_pointer = findViewById(R.id.ic_pointer);
 
-        AdView adView = (AdView)findViewById(R.id.adView);
-        AdRequest adRequest = new AdRequest.Builder().build();
-        adView.loadAd(adRequest);
+//        AdView adView = (AdView)findViewById(R.id.adView);
+//        AdRequest adRequest = new AdRequest.Builder().build();
+//        adView.loadAd(adRequest);
 
         random = new Random();
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                button.setClickable(false);
+
                 degree_old = degree % 360;
                 degree = random.nextInt(3600) + 720;
                 RotateAnimation rotateAnimation = new RotateAnimation(degree_old, degree,
@@ -57,6 +60,7 @@ public class RouletteActivity extends AppCompatActivity {
                     @Override
                     public void onAnimationEnd(Animation animation) {
                         textView.setText(currentNumber(360 - (degree % 360)));
+                        button.setClickable(true);
                     }
 
                     @Override

@@ -34,9 +34,9 @@ public class Start extends AppCompatActivity {
         saveStateButton = (Button) findViewById(R.id.save_state_butt);
         switchButton = (Switch) findViewById(R.id.switch_butt);
 
-        AdView adView = (AdView)findViewById(R.id.adView);
-        AdRequest adRequest = new AdRequest.Builder().build();
-        adView.loadAd(adRequest);
+//        AdView adView = (AdView)findViewById(R.id.adView);
+//        AdRequest adRequest = new AdRequest.Builder().build();
+//        adView.loadAd(adRequest);
 
         saveStateButton.setOnClickListener(new View.OnClickListener() {
             @Override

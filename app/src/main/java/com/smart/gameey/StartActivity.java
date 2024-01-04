@@ -22,9 +22,9 @@ import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
+import com.google.firebase.FirebaseApp;
 import com.google.firebase.remoteconfig.FirebaseRemoteConfig;
 import com.google.firebase.remoteconfig.FirebaseRemoteConfigSettings;
 import com.smart.gameey.sankeGame.SnakeActivity;
@@ -36,13 +36,14 @@ public class StartActivity extends AppCompatActivity {
 
     FloatingActionButton addIcon, shareApp, rateApp, copyAppLink;
     boolean fabVisible = false;
+//    private AdView adView;
+
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_start);
-
-        final FirebaseRemoteConfig mFirebaseRemoteConfig;
+    protected void onStart() {
+        super.onStart();
+//        FirebaseApp.initializeApp(getApplicationContext());
+        FirebaseRemoteConfig mFirebaseRemoteConfig;
 
         HashMap<String, Object> defaultsRate = new HashMap<>();
         defaultsRate.put("gameey_version_code", String.valueOf(getVersionCode()));
@@ -69,6 +70,14 @@ public class StartActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_start);
+
+        FirebaseApp.initializeApp(this);
 
         AdView adView = (AdView)findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
@@ -130,8 +139,7 @@ public class StartActivity extends AppCompatActivity {
 
     }
 
-    private Intent rateIntentForUrl(String url)
-    {
+    private Intent rateIntentForUrl(String url) {
         Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(String.format("%s?id=%s", url, getPackageName())));
         int flags = Intent.FLAG_ACTIVITY_NO_HISTORY | Intent.FLAG_ACTIVITY_MULTIPLE_TASK;
         if (Build.VERSION.SDK_INT >= 21)
@@ -145,35 +153,6 @@ public class StartActivity extends AppCompatActivity {
         }
         intent.addFlags(flags);
         return intent;
-    }
-
-    private void showPopupMenu(View view) {
-        PopupMenu popupMenu = new PopupMenu(this, view);
-        popupMenu.inflate(R.menu.expandable_menu);
-
-        popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
-            @Override
-            public boolean onMenuItemClick(MenuItem item) {
-                switch (item.getItemId()) {
-                    case R.id.action_item1:
-                        showMessage("Item 1 Clicked");
-                        return true;
-
-                    case R.id.action_item2:
-                        showMessage("Item 2 Clicked");
-                        return true;
-
-                    default:
-                        return false;
-                }
-            }
-        });
-
-        popupMenu.show();
-    }
-
-    private void showMessage(String message) {
-        Snackbar.make(findViewById(android.R.id.content), message, Snackbar.LENGTH_SHORT).show();
     }
 
     private PackageInfo pInfo;
